@@ -1,0 +1,339 @@
+/* =================================
+   Responsive Styles
+   Mobile-First Approach
+   ================================= */
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  /* Container */
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Section Spacing */
+  section {
+    padding: 60px 0;
+  }
+
+  /* Navigation */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: var(--shadow-lg);
+    padding: 20px 0;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 80px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+
+  /* Grid Layouts */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Trust Stats */
+  .trust-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* CTA Section */
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+
+  /* About Hero */
+  .about-hero {
+    padding: 60px 0;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  /* Mission Vision */
+  .mission-vision {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Form & Info */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Map Container */
+  .map-container {
+    height: 300px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 20px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 20px;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  /* Typography */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  /* Stats */
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  /* Card Icon */
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  /* Contact Icon */
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  /* Social Links */
+  .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Form */
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  .cta-section h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  header,
+  footer,
+  .cta-section,
+  .cta-buttons {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Landscape Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-blue: #0066FF;
+    --text-dark: #000000;
+    --mid-grey: #333333;
+  }
+
+  .btn {
+    border-width: 2px;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  /* Uncomment to enable dark mode
+  :root {
+    --white: #1A1A1A;
+    --light-grey: #2D2D2D;
+    --text-dark: #FFFFFF;
+    --mid-grey: #B8B8B8;
+    --dark-grey: #E8E8E8;
+  }
+
+  header {
+    background-color: #1A1A1A;
+  }
+
+  .card,
+  .testimonial-card,
+  .service-card {
+    background-color: #2D2D2D;
+  }
+  */
+}
